@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
+		<members>*</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
 		<members>Gatherica</members>
 		<name>CustomApplication</name>
 	</types>
@@ -8,6 +12,7 @@
 		<members>Account</members>
 		<members>Contact</members>
 		<members>Gatherica_Event__c</members>
+		<members>Gatherica_Security_key__c</members>
 		<members>gatherica_event_Users__c</members>
 		<name>CustomObject</name>
 	</types>
