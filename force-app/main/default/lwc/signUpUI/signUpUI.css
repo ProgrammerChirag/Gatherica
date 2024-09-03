@@ -1,0 +1,135 @@
+.signup-container {
+    width: 90%;
+    max-width: 800px; /* Increased maximum width for better coverage */
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    position: relative; /* Ensure the background is properly layered */
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.brand {
+    font-size: 40px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    color: #0070d2;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.welcome-text {
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.input-container:last-child {
+    margin-right: 0;
+}
+
+.input-field {
+    width: 100%;
+    border: none;
+    background: #f2f2f2;
+    border-radius: 8px;
+    color: #333;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    padding: 15px;
+    outline: none;
+}
+
+.signup-button {
+    width: 100%;
+    height: 50px;
+    background-color: #0070d2;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.signup-button:hover {
+    background-color: #005bb5;
+}
+
+.already-account {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.already-account-link {
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    text-decoration: underline;
+    color: #0070d2;
+}
+
+.promo-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #eaf0f6;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.promo-title {
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.promo-text {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.become-organizer-link {
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    text-decoration: underline;
+    color: #0070d2;
+}

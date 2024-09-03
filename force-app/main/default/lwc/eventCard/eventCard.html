@@ -1,0 +1,33 @@
+<template>
+    <div class="event-card-container">
+        <template for:each={processedEvents} for:item="event">
+            <div key={event.id} class="event-card">
+                <template if:true={event.imageUrl}>
+                    <div class="event-image">
+                        <img src={event.imageUrl} alt={event.name}/>
+                    </div>
+                </template>
+                <div class="event-body">
+                    <div class="event-header">
+                        <a class="event-heading">{event.name}</a>
+                        <p class="event-date">{event.date}</p>
+                        <p class="event-publisher">{event.publisher}</p>
+                    </div>
+                    <p class="event-description">{event.description}</p>
+                    <div class="event-info">
+                        <span class={event.eventTypeClass}>{event.type}</span>
+                        <p class="expected-attendance">Tickets Sold: {event.expectedAttendance}</p>
+                    </div>
+                </div>
+                <div if:true={showSubsriberButton} class="event-footer">
+                    <template if:true={isSubscribeAction}>
+                        <button class="action-button subscribe-button" data-id={event.id} onclick={handleAction}>Subscribe</button>
+                    </template>
+                    <template if:false={isSubscribeAction}>
+                        <button class="action-button unsubscribe-button" data-id={event.id} onclick={handleAction}>Unsubscribe</button>
+                    </template>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

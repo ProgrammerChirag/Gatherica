@@ -1,0 +1,1 @@
+public class Gatherica_Exception extends Exception {}

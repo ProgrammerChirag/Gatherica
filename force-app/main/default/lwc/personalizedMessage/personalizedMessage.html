@@ -1,0 +1,10 @@
+<template>
+    <div class="welcome-message">
+        <template if:true={userName}>
+            <p>Welcome back, {userName}!</p>
+        </template>
+        <template if:false={userName}>
+            <p>Welcome to Gatherica! Explore and find exciting events happening near you.</p>
+        </template>
+    </div>
+</template>

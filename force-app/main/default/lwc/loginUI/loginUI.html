@@ -1,0 +1,43 @@
+<template>
+
+    <div class="login-container">
+        <div class="header">
+            <div class="brand">GATHERICA</div>
+        </div>
+        <div class="welcome-section">
+            <div class="welcome-text">{greetingMessage}</div>
+        </div>
+        <div class="form-section">
+            <div class="form-card">
+                <div class="input-container">
+                    <input type="text" class="input-field" placeholder="Username" oninput={handleUsernameChange} />
+                </div>
+                <div class="input-container password-container">
+                    <input data-target-id='passwordbox' type={passwordInputType} class="input-field" placeholder="Password" oninput={handlePasswordChange} />
+                    <lightning-button-icon icon-name={toggleIconClass} alternative-text={toggleIconAlternativeText}
+                        class="password-toggle-icon" onclick={togglePasswordVisibility}></lightning-button-icon>
+                </div>
+                <button  if:false={showSpinner} class="login-button" onclick={handleLogin}>Login</button>
+                <!-- spinner section -->
+                <div if:true={showSpinner}>
+                    <c-gatherica-spinner is-short-container = true></c-gatherica-spinner>
+                </div>
+            </div>
+        </div>
+
+        <div class="create-account">
+            <a href="#" class="create-account-link" onclick={navigateToSignUp}>Create new account</a>
+        </div>
+        <div class="promo-section">
+            <div class="promo-title">Plan Your Event With Us And Become</div>
+            <div class="promo-text">
+                Now you can apply to become an event organizer in your city.<br/>
+                    Here are very simple steps and at affordable prices you can<br/>
+                    access our marketing tools to increase your reach.<br/>
+                <br/>
+                <a href="#" class="become-organizer-link" onclick={eventLoginPageRedirection}>Become an event
+                    organizer</a>
+            </div>
+        </div>
+    </div>
+</template>

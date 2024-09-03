@@ -1,0 +1,18 @@
+<template>
+
+	<template if:true={showLoginUI}>
+		<c-login-u-i></c-login-u-i>
+	</template>
+	
+	<template if:true={showSignUpUI}>
+		<c-sign-up-u-i></c-sign-up-u-i>
+	</template>
+	
+	<template if:true={showOrganizerSignUpUI}>
+		<c-organizer-sign-up-u-i></c-organizer-sign-up-u-i>
+	</template>
+	
+	<template if:true={showOrganizerLoginUI}>
+		<c-organizer-login-u-i></c-organizer-login-u-i>
+	</template>
+</template>

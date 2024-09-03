@@ -1,0 +1,65 @@
+.ai-generate-button {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    display: flex;
+    align-items: center;
+    background-color: #0070d2;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it stays on top of other content */
+    cursor: pointer;
+}
+
+.ai-icon {
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.ai-button {
+    border: none;
+    background: none;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Notification Message */
+.notification-message {
+    position: fixed;
+    bottom: 80px; /* Above the button */
+    right: 20px; /* Same as button */
+    background-color: #0070d2;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Ensure it stays on top of other content */
+    max-width: 250px;
+    font-size: 0.875rem;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInOut 3s forwards;
+}
+
+/* Animation for notification */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}

@@ -1,0 +1,13 @@
+<template>
+    <div class="ai-generate-button" onclick={handleClick}>
+        <span class="ai-icon">🤖</span>
+        <button class="ai-button">Ask ME!!</button>
+    </div>
+
+    <!-- Notification Popup -->
+    <template if:true={showMessage}>
+        <div class="notification-message">
+            <p>Discover our new AI feature! try me to know about upcoming events.</p>
+        </div>
+    </template>
+</template>

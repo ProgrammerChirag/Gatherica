@@ -1,0 +1,49 @@
+<template>
+    <div class="signup-container">
+        <div class="header">
+            <div class="brand">GATHERICA</div>
+        </div>
+        <div class="welcome-section">
+            <div class="welcome-text">Create Your Creator Account</div>
+            <div class="welcome-subtext">
+                Join our platform and showcase your creative projects and events to a wider audience.
+            </div>
+        </div>
+        <div class="form-card">
+            <div class="input-container">
+                <input type="text" class="input-field" placeholder="Name" oninput={handleNameChange} />
+            </div>
+            <div class="input-container">
+                <input type="text" class="input-field" placeholder="Username" oninput={handleSignUpUsernameChange} />
+            </div>
+            <div class="input-container">
+                <input type="password" class="input-field" placeholder="Password" oninput={handleSignUpPasswordChange} />
+            </div>
+            <div class="input-container">
+                <input type="password" class="input-field" placeholder="Confirm Password" oninput={handleConfirmPasswordChange} />
+            </div>
+            <div class="input-container">
+                <input type="email" class="input-field" placeholder="Email" oninput={handleEmailChange} />
+            </div>
+            <div class="input-container">
+                <input type="text" class="input-field" placeholder="ID Card Detail/Number" oninput={handleIdCardChange} />
+            </div>
+            <div class="input-container">
+                <input type="text" class="input-field" placeholder="Address Proof Document Link" oninput={handleAddressProofChange} />
+            </div>
+            <div class="input-container">
+                <input type="text" class="input-field" placeholder="Pin Code" oninput={handlePinCodeChange} />
+            </div>
+            <div class="input-container">
+                <input type="text" class="input-field" placeholder="Phone Number" oninput={handlePhoneNumberChange} />
+            </div>
+            <div class="input-container">
+                <input type="text" class="input-field" placeholder="Company Name" oninput={handleCompanyNameChange} />
+            </div>
+            <button class="signup-button" onclick={handleSignUp}>Sign Up</button>
+        </div>
+        <div class="toggle-form">
+            <a href="#" class="toggle-link" onclick={navigateToLogin}>Already have an account?</a>
+        </div>
+    </div>
+</template>

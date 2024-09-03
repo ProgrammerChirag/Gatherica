@@ -1,0 +1,38 @@
+<template>
+    <div class="login-container">
+        <div class="header">
+            <div class="brand">GATHERICA</div>
+        </div>
+        <div class="welcome-section">
+            <div class="welcome-text">Welcome Back!</div>
+            <div class="welcome-subtext">
+                Access your creative projects and manage your events with ease.
+            </div>
+        </div>
+        <div class="form-card">
+            <div class="input-container">
+                <input data-target-id='usernamebox' type="text" class="input-field" placeholder="Username" oninput={handleUsernameChange} />
+            </div>
+            <div class="input-container password-container">
+                <input data-target-id='passwordbox' type={passwordInputType} class="input-field" placeholder="Password" oninput={handlePasswordChange} />
+                <lightning-button-icon
+                    icon-name={toggleIconClass}
+                    alternative-text={toggleIconAlternativeText}
+                    class="password-toggle-icon"
+                    onclick={togglePasswordVisibility}
+                ></lightning-button-icon>
+            </div>
+            <button class="login-button" onclick={handleLogin}>Login</button>
+        </div>
+        <div class="toggle-form">
+            <a href="#" class="toggle-link" onclick={navigateToSignUp}>Create new account</a>
+        </div>
+        <div class="promo-section">
+            <div class="promo-title">Manage Your Creative Projects</div>
+            <div class="promo-text">
+                Log in to manage your projects and events efficiently. Explore our tools designed to help you succeed in your creative endeavors.<br/><br/>
+                <a href="#" class="learn-more-link" onclick={handleLoginUserRedirection}>Learn more about our platform</a>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,12 @@
+<template>
+    <div class="root-contaniner-gatherica">
+        <!--  Gatherica Login UI for unauthenticated Users -->
+        <div if:false={userLoggedIN}>
+            <c-gatherica-login></c-gatherica-login>
+        </div>
+        <!--  Gatherica Dashboard UI for authenticated event Users -->
+        <div if:true={userLoggedIN}>
+            <c-gatherica-dashboard user-login-auth={userLoginAuth} onloadcomplete={changeInitState}></c-gatherica-dashboard>
+        </div>
+    </div>
+</template>

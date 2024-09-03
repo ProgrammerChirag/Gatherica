@@ -1,0 +1,33 @@
+<template>
+    <div class="recommendation-panel">
+        <button class="cancel-button" onclick={handleCancel}>×</button>
+        <h2>Personalized Smart Suggestions</h2>
+        <span class="ai-badge">AI-Powered</span>
+        <div if:true={showSpinner}>
+            <c-gatherica-spinner></c-gatherica-spinner>
+        </div>
+        <div if:false={showSpinner}>
+            <template if:true={events}>
+                <div class="event-list">
+                    <template for:each={events} for:item="event">
+                        <div key={event.Id} class="event-card">
+                            <div class="event-content">
+                                <div class="event-details">
+                                    <h3 class="event-heading">{event.Name}</h3>
+                                    <p class="event-description">{event.Description}</p>
+                                </div>
+                                <div class="event-meta">
+                                    <span class="event-date">{event.EventDate}</span>
+                                    <button class="view-button" data-id={event.Id} onclick={handleViewEvent}>View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </template>
+            <template if:false={events}>
+                <p class="no-recommendations">No recommendations available at the moment.</p>
+            </template>
+        </div>
+    </div>
+</template>

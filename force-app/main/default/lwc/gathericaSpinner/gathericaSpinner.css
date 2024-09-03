@@ -1,0 +1,21 @@
+.container-long {
+    position: relative;
+    height: 100vh; /* Full viewport height to cover the entire page */
+}
+
+.container-short {
+    position: relative;
+    height: 25vh; /* Full viewport height to cover the entire page */
+}
+
+.slds-spinner_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure the spinner is above all other content */
+}
+
+.content {
+    opacity: 0.5; /* Optionally dim the content while loading */
+}

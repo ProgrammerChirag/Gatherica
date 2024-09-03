@@ -1,0 +1,60 @@
+/* Container for the personalized message */
+.welcome-message {
+	border-radius: 12px;
+	text-align: left;
+	font-size: 24px;
+	color: black;
+	display: inline-block;
+	margin: 0px 0px 15px 15px;
+}
+
+/* Styling for the first paragraph (personalized message) */
+.welcome-message p:first-of-type {
+	/* Darker blue to match a professional theme */
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+
+/* Styling for subsequent paragraphs */
+.welcome-message p:not(:first-of-type) {
+	color: #000000;
+	font-weight: 600;
+	margin-bottom: 15px;
+	font-size: 24px;
+	line-height: 20px;
+}
+
+/* Button styling */
+.welcome-message .action-button {
+	display: inline-block;
+	padding: 12px 24px;
+	border-radius: 30px;
+	background-color: #0056b3;
+	/* Matching button color */
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 500;
+	margin-top: 20px;
+	transition: background-color 0.3s, transform 0.2s;
+}
+
+.welcome-message .action-button:hover {
+	background-color: #003d7a;
+	/* Darker shade on hover */
+	transform: translateY(-2px);
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+	.welcome-message {
+		font-size: 16px;
+		padding: 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.welcome-message {
+		font-size: 14px;
+		padding: 15px;
+	}
+}

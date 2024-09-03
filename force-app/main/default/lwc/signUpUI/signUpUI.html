@@ -1,0 +1,59 @@
+<template>
+    <div class="background-wrapper">
+        <div class="signup-container">
+            <div class="header">
+                <div class="brand">GATHERICA</div>
+            </div>
+            <div class="welcome-section">
+                <div class="welcome-text">Create Your Account</div>
+            </div>
+            <div class="form-section">
+                <div class="form-card">
+                    <div class="form-group">
+                        <div class="input-container">
+                            <input type="text" class="input-field" placeholder="Enter name" oninput={handleNameChange} />
+                        </div>
+                        <div class="input-container">
+                            <input type="text" class="input-field" placeholder="Enter username" oninput={handleUsernameChange} />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-container">
+                            <input type="password" class="input-field" placeholder="Enter password" oninput={handlePasswordChange} />
+                        </div>
+                        <div class="input-container">
+                            <input type="password" class="input-field" placeholder="Confirm password" oninput={handleConfirmPasswordChange} />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-container">
+                            <input type="email" class="input-field" placeholder="Enter email" oninput={handleEmailChange} />
+                        </div>
+                        <div class="input-container">
+                            <input type="date" class="input-field" placeholder="Enter date of birth" oninput={handleDobChange} />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-container">
+                            <input type="text" class="input-field" placeholder="Enter city" oninput={handleCityChange} />
+                        </div>
+                    </div>
+                    <button class="signup-button" onclick={handleSignup}>Sign Up</button>
+                </div>
+            </div>
+            <div class="already-account">
+                <a href="#" class="already-account-link" onclick={handleLoginPageRedirection}>Already have an account? Log in</a>
+            </div>
+            <div class="promo-section">
+                <div class="promo-title">Plan Your Event With Us And Become</div>
+                <div class="promo-text">
+                    Now you can apply to become an event organizer in your city.<br/>
+                    Here are very simple steps and at affordable prices you can<br/>
+                    access our marketing tools to increase your reach.<br/>
+                    <br/>
+                    <a href="#" class="become-organizer-link" onclick={handleEventRedirectionToAdminSignup}>Become an event organizer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

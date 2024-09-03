@@ -1,0 +1,128 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ddd;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    color: #007bff;
+    font-weight: 700;
+}
+
+.search-container {
+    flex-grow: 1;
+    max-width: 400px;
+    margin: 0 20px;
+}
+
+.search-box {
+    width: calc(100% - 80px);
+    padding: 12px;
+    border-radius: 8px;
+    border: 0.3px solid #ccc;
+    font-size: 1em;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease, border-color 0.3s ease;
+}
+
+.search-box:focus {
+    border-color: #0070d2;
+}
+
+.search-box.expanded {
+    width: 100%
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative; /* Needed for dropdown positioning */
+}
+
+.menu-icon, .profile-icon {
+    font-size: 1.6em;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-icon:hover, .profile-icon:hover {
+    color: #0070d2;
+    transform: scale(1.1);
+}
+
+.menu-dropdown, .profile-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    min-width: 150px; /* Ensure dropdowns are wide enough */
+}
+
+.menu-dropdown ul, .profile-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-dropdown li, .profile-dropdown li {
+    padding: 10px 20px;
+}
+
+.menu-dropdown a, .profile-dropdown a {
+    text-decoration: none;
+    color: #0070d2;
+    display: block;
+}
+
+.menu-dropdown a:hover, .profile-dropdown a:hover {
+    background-color: #f0f4f8;
+}
+
+/* Show dropdowns when they should be visible */
+.menu-dropdown[style*="display: block"], .profile-dropdown[style*="display: block"] {
+    display: block;
+}
+
+
+
+.search-wrapper {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #0070d2;
+    font-size: 1.2em;
+}
+
+.search-box {
+    width: calc(100% - 40px); /* Adjust width to account for the icon */
+    padding: 12px;
+    padding-left: 40px; /* Add padding to make space for the icon */
+    border-radius: 8px;
+    border: 0.3px solid #ccc;
+    font-size: 1em;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease, border-color 0.3s ease;
+}

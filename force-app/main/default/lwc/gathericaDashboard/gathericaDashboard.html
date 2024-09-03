@@ -1,0 +1,69 @@
+<template>
+    <div class="dashboard">
+        <!-- Header Section -->
+        <c-header-section user-login-auth={userLoginAuth} onprofileclicked={handleProfileClicked}></c-header-section>
+        <!-- Include the AI Generate Button -->
+        <c-ai-generate-button data-target-id="gatherica-Recommendations-01" onstartai={aiRecommendationHandler}>
+        </c-ai-generate-button>
+
+        <!-- Main Content Section -->
+        <div if:false={showSpinner} class="content">
+            <div if:true={showProfileModal}>
+                <c-profile-modal user-login-auth={userLoginAuth} onprofileclosed = {handleProfileClosed}></c-profile-modal>
+            </div>
+            <c-personalized-Message></c-personalized-Message>
+            <div if:true={showRecommendations} class="recommendation-panel-container">
+                <c-gatherica-Recommendations-panel data-id="gatherica-Recommendations-01"
+                    oncancelclicked={hideRecommendations}>
+                </c-gatherica-Recommendations-panel>
+            </div>
+
+            <div if:true={showExploreMore} class="button-container">
+                <button class="explore-more-button" onclick={handleExploreMore}>Explore More</button>
+            </div>
+
+            <div if:false={showExploreMore}>
+                <!-- Tabs -->
+                <div class="tabs">
+                    <template for:each={tabConfig} for:item="tabInfo" for:index="index">
+                        <div key={tabInfo.dataId} class={tabInfo.CSS} onclick={onTabClicked} data-id={tabInfo.dataId}>
+                            {tabInfo.name}
+                        </div>
+                    </template>
+                </div>
+
+                <!-- Spinner -->
+                <template if:true={isLoading}>
+                    <div class="spinner-container">
+                        <div class="spinner"></div>
+                    </div>
+                </template>
+
+                <!-- Filters -->
+                <div class="filters" if:true={showFilters}>
+                    <input type="text" placeholder="Search events by name..." oninput={handleFilterChange} data-filter="name"/>
+                    <input type="date" placeholder="Filter by date" oninput={handleFilterChange} data-filter="date"/>
+                    <!-- Add more filters as needed -->
+                </div>
+
+                <!-- Event Lists -->
+                <section class="event-list new-events" if:true={showEvents}>
+                    <template if:true={filteredEvents.length}>
+                        <c-event-card subscription-enabled={filteredEvents.subscriptionEnabled} events={filteredEvents}
+                            action="subscribe"></c-event-card>
+                    </template>
+                    <template if:false={filteredEvents.length}>
+                        <p class="no-events">No events found.</p>
+                    </template>
+                </section>
+            </div>
+        </div>
+
+        <div if:true={showSpinner}>
+            <c-gatherica-spinner is-short-container=false></c-gatherica-spinner>
+        </div>
+
+        <!-- Footer Section -->
+        <c-footer></c-footer>
+    </div>
+</template>
