@@ -15,7 +15,8 @@ private class LoginControllerTest {
 			FirstName = 'John',
 			LastName = 'Doe',
 			contact_user_name__c = 'testuser',
-			Password__c = 'testpassword'
+			Password__c = 'testpassword',
+			City__c = 'testCity'
 		);
 		insert testContact;
 
@@ -32,8 +33,7 @@ private class LoginControllerTest {
 		Account testAccount = new Account(
 			Name = 'Test Account',
 			Account_User_Name__c = 'testaccount',
-			Password__c = 'testpassword',
-			City__c = 'testCity'
+			Password__c = 'testpassword'
 		);
 		insert testAccount;
 
