@@ -2,7 +2,7 @@
  * @description       :
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
  * @group             :
- * @last modified on  : 07-14-2024
+ * @last modified on  : 09-05-2024
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 **/
 @isTest
@@ -32,7 +32,8 @@ private class LoginControllerTest {
 		Account testAccount = new Account(
 			Name = 'Test Account',
 			Account_User_Name__c = 'testaccount',
-			Password__c = 'testpassword'
+			Password__c = 'testpassword',
+			City__c = 'testCity'
 		);
 		insert testAccount;
 
