@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
+		<members>CommunitiesLandingController</members>
+		<members>CommunitiesLandingControllerTest</members>
 		<members>GathericaHomeController</members>
+		<members>GathericaHomeControllerTest</members>
 		<members>Gatherica_EncodeHandler</members>
 		<members>Gatherica_EncodeHandlerTest</members>
 		<members>Gatherica_Exception</members>
 		<members>Gatherica_LoginController</members>
 		<members>Gatherica_LoginControllerTest</members>
 		<members>Gatherica_SignUpController</members>
+		<members>Gatherica_SignUpControllerTest</members>
 		<members>LoginWrapper</members>
 		<members>UserWrapper</members>
 		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>CommunitiesLanding</members>
+		<name>ApexPage</name>
 	</types>
 	<types>
 		<members>Gatherica</members>
@@ -27,6 +35,10 @@
 		<members>Gatherica_Security_key__c</members>
 		<members>gatherica_event_Users__c</members>
 		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>CustomSite</name>
 	</types>
 	<types>
 		<members>*</members>
@@ -94,14 +106,12 @@
 		<members>gathericaSpinner</members>
 		<members>gathericaTab</members>
 		<members>headerSection</members>
-		<members>lightningChart</members>
 		<members>loginUI</members>
 		<members>organizerLoginUI</members>
 		<members>organizerSignUpUI</members>
 		<members>personalizedMessage</members>
 		<members>profileModal</members>
 		<members>recentActivities</members>
-		<members>sidebarNavigation</members>
 		<members>signUpUI</members>
 		<name>LightningComponentBundle</name>
 	</types>
@@ -110,8 +120,16 @@
 		<name>LightningExperienceTheme</name>
 	</types>
 	<types>
+		<members>*</members>
+		<name>Network</name>
+	</types>
+	<types>
 		<members>Gatherica_Guest_Site_Permisson</members>
 		<name>PermissionSet</name>
+	</types>
+	<types>
+		<members>Admin</members>
+		<name>Profile</name>
 	</types>
 	<types>
 		<members>*</members>

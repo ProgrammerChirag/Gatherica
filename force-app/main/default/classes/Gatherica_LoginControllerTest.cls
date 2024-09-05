@@ -8,7 +8,8 @@ private class Gatherica_LoginControllerTest {
 			FirstName = 'John',
 			LastName = 'Doe',
 			contact_user_name__c = 'testuser',
-			Password__c = 'testpassword'
+			Password__c = 'testpassword',
+			City__c = 'testCity'
 		);
 		insert testContact;
 

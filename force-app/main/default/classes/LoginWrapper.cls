@@ -16,16 +16,10 @@ public Class LoginWrapper {
 		private String username {get; set;}
 		private String name {get; set;}
 		private String sessionTimeOut {get; set;}
-		private String error {get; set;}
 
 		public LoginWrapper (String username, String name, String sessionTimeOut) {
 			this.username = username;
 			this.name = name;
 			this.sessionTimeOut = sessionTimeOut;
-		}
-
-		public LoginWrapper (String username, String error) {
-			this.username = username;
-			this.error = error;
 		}
 	}
