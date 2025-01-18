@@ -9,6 +9,7 @@
             "backgroundImageConfig" : "",
             "backgroundImageOverlay" : "rgba(0,0,0,0)",
             "componentSpacerSize" : "",
+            "dxpStyle" : { },
             "layoutDirectionDesktop" : "row",
             "layoutDirectionMobile" : "column",
             "layoutDirectionTablet" : "column",
@@ -20,7 +21,9 @@
           },
           "children" : [ {
             "children" : [ {
-              "attributes" : { },
+              "attributes" : {
+                "dxpStyle" : { }
+              },
               "definition" : "c:gatherica",
               "id" : "314cc85c-4b56-48f2-aab3-566fe6b3bb47",
               "type" : "component"
@@ -43,6 +46,7 @@
           "attributes" : {
             "customHeadTags" : "",
             "description" : "We build Community",
+            "dxpStyle" : { },
             "pageTitle" : "Gatherica",
             "recordId" : "{!recordId}"
           },
@@ -62,5 +66,6 @@
     "dataProviders" : [ ],
     "themeLayoutType" : "Inner",
     "viewType" : "home"
-  }
+  },
+  "urlName" : "home"
 }

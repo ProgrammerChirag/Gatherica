@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="User Login Events" class="gatherica-card">
+        <template if:true={events.length}>
+            <ul class="gatherica-list">
+                <template for:each={events} for:item="event">
+                    <li key={event.replayId} class="gatherica-list-item">
+                        <p class="gatherica-user">User: {event.data.payload.username__c}</p>
+                        <p class="gatherica-login-time">Login Time: {event.data.payload.Login_Time__c}</p>
+                        <button class="slds-button slds-button_brand">Save Log</button>
+                    </li>
+                </template>
+            </ul>
+        </template>
+        <template if:false={events.length}>
+            <p class="gatherica-no-events">No events received yet.</p>
+        </template>
+    </lightning-card>
+</template>

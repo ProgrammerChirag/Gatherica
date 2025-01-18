@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Is_User_Happy__c</fullName>
     <defaultValue>false</defaultValue>
-    <externalId>false</externalId>
     <label>Is User Happy</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

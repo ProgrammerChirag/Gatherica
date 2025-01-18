@@ -13,9 +13,9 @@
 
 public Class LoginWrapper {
 
-		private String username {get; set;}
-		private String name {get; set;}
-		private String sessionTimeOut {get; set;}
+		@AuraEnabled public String username {get; set;}
+		@AuraEnabled public String name {get; set;}
+		@AuraEnabled public String sessionTimeOut {get; set;}
 
 		public LoginWrapper (String username, String name, String sessionTimeOut) {
 			this.username = username;

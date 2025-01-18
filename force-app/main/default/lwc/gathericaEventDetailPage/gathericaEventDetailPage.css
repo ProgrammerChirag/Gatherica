@@ -1,0 +1,238 @@
+.dashboard,
+.event-card,
+.footer,
+.filters input {
+    font-family: "Lato", sans-serif;
+}
+
+.dashboard {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f4f7f9;
+    /* Light background color */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.tab {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 24px;
+    font-size: 1em;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: gray;
+    /* border: .8px solid grey; */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    margin: 0px 2px;
+}
+
+.tab.active {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+    /* Highlight border for active tab */
+}
+
+.tab:hover {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+    /* Slightly darker background on hover for inactive tabs */
+}
+
+.event-list {
+    border-radius: 10px;
+    padding: 20px;
+    /* background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease; */
+}
+
+.event-list h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #0070d2;
+    /* Primary color for headings */
+}
+
+.no-events {
+    font-size: 1em;
+    color: #666;
+    text-align: center;
+}
+
+.footer {
+    padding: 20px;
+    background-color: #ffffff;
+    border-top: 2px solid #ddd;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer li {
+    display: inline;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.event-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-list .event-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two cards per row */
+    gap: 20px;
+    /* Space between cards */
+}
+
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.filters input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Full viewport height */
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    /* Light grey */
+    border-top: 8px solid #007bff;
+    /* Primary color */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 20px 20px;
+    /* Adjust top padding to fit below the fixed header */
+    box-sizing: border-box;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+    /* Ensure it's positioned relative to its container */
+    z-index: 10;
+    /* Ensure tabs are above other content but below the header */
+}
+
+
+.recommendation-panel-container {
+    margin: 16px 0px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    /* Center the button horizontally */
+    margin: 40px 0;
+    /* Add vertical spacing from other components */
+}
+
+.explore-more-button {
+    background-color: #0070d2;
+    /* Gatherica's primary blue */
+    color: #ffffff;
+    /* Text color */
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.explore-more-button:hover {
+    background-color: #005fb2;
+    /* Darker blue for hover */
+    transform: scale(1.05);
+    /* Slightly enlarge on hover */
+}
+
+.explore-more-button:active {
+    background-color: #004a9d;
+    /* Even darker blue for active state */
+    transform: scale(1.02);
+    /* Slightly shrink on click */
+}
+
+.explore-more-button::after {
+    content: '→';
+    /* Arrow to indicate forward action */
+    margin-left: 8px;
+    font-size: 1.2rem;
+    transition: margin-left 0.3s;
+}
+
+.explore-more-button:hover::after {
+    margin-left: 12px;
+    /* Arrow moves to the right on hover */
+}

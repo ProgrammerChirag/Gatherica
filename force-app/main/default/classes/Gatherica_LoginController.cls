@@ -15,7 +15,7 @@ public without Sharing class Gatherica_LoginController {
 					'60'
 				);
 			} else {
-				throw new Gatherica_Exception('provided cred are incorrect please check again and validate Thanks !!');
+				throw new Gatherica_Exception(GathericaErrorUtils.getError('ERR_INVALID_CRED'));
 			}
 		} else if (String.isNotEmpty(userType) && userType.equalsIgnoreCase('Account')) {
 			Account acc = getAccInfo(username, password);
@@ -26,10 +26,10 @@ public without Sharing class Gatherica_LoginController {
 					'60'
 				);
 			} else {
-				throw new Gatherica_Exception('provided cred are incorrect please check again and validate Thanks !!');
+				throw new Gatherica_Exception(GathericaErrorUtils.getError('ERR_INVALID_CRED'));
 			}
 		} else {
-			throw new Gatherica_Exception('Something Went Wrong !!'+userType);
+			throw new Gatherica_Exception(GathericaErrorUtils.getError('ERR_SOMETHING_WENT_WRONG') + userType);
 		}
 
 		return EncodingUtil.base64Encode(Gatherica_EncodeHandler.getEncryptedValue(JSON.serialize(lw)));

@@ -1,5 +1,13 @@
 public without sharing class GathericaHomeController {
 
+	@AuraEnabled(cacheable=true)
+	public static List<EventWrapper> getEventList(Integer recordCount, String username) {
+		if(recordCount > 0) 
+			return GathericaHomeServiceHandler.getEventList(recordCount, username);
+		throw new Gatherica_Exception (GathericaErrorUtils.getError('ERR_FETCH_EVENT'));
+		
+	}
+
 	@AuraEnabled(cacheable = true)
 	public static List<UserWrapper> getUserDetails(String encryptedUserInfo) {
 		// Validate input and throw exception if necessary
@@ -54,7 +62,6 @@ public without sharing class GathericaHomeController {
 			ORDER BY CreatedDate DESC
 			LIMIT 1
 		];
-		System.debug('Fetched Contact: ' + contacts);
 		return !contacts.isEmpty() ? contacts[0] : NULL;
 	}
 

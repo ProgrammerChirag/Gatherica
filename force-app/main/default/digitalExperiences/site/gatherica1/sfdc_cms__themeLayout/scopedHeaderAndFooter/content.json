@@ -91,5 +91,6 @@
         }
       } ]
     }
-  }
+  },
+  "urlName" : "scoped-header-and-footer"
 }

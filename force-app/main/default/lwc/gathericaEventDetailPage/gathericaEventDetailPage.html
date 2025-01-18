@@ -1,0 +1,33 @@
+<template>
+    <div class="dashboard">
+        <!-- Header Section -->
+        <c-header-section user-login-auth={userLoginAuth} onprofileclicked={handleProfileClicked}
+            onshownotificationbar={handleShowNotificationBar}></c-header-section>
+
+        <!-- Main Content Section -->
+        <div if:false={showSpinner} class="content">
+
+            <div if:true={showProfileModal}>
+                <c-profile-modal user-login-auth={userLoginAuth} onprofileclosed={handleProfileClosed}>
+                </c-profile-modal>
+            </div>
+            <div if:true={showNotificationModal}>
+                <c-event-notifications onclosenotificationbar={handleCloseNotificationBar}></c-event-notifications>
+            </div>
+
+            <!-- Spinner -->
+            <template if:true={isLoading}>
+                <div class="spinner-container">
+                    <div class="spinner"></div>
+                </div>
+            </template>
+        </div>
+
+        <div if:true={showSpinner}>
+            <c-gatherica-spinner is-short-container=false></c-gatherica-spinner>
+        </div>
+        <!-- Footer Section -->
+        <c-footer></c-footer>
+    </div>
+
+</template>

@@ -23,7 +23,7 @@
     <redirectToCustomDomain>false</redirectToCustomDomain>
     <referrerPolicyOriginWhenCrossOrigin>true</referrerPolicyOriginWhenCrossOrigin>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteAdmin>	codebase@gatherica.com</siteAdmin>
+    <siteAdmin>codebase@gatherica.com</siteAdmin>
     <siteGuestRecordDefaultOwner>codebase@gatherica.com</siteGuestRecordDefaultOwner>
     <siteType>ChatterNetwork</siteType>
     <urlPathPrefix>gathericavforcesite</urlPathPrefix>

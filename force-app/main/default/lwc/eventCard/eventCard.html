@@ -1,7 +1,7 @@
 <template>
     <div class="event-card-container">
         <template for:each={processedEvents} for:item="event">
-            <div key={event.id} class="event-card">
+            <div key={event.id} class="event-card" data-id={event.id}>
                 <template if:true={event.imageUrl}>
                     <div class="event-image">
                         <img src={event.imageUrl} alt={event.name}/>
@@ -9,13 +9,13 @@
                 </template>
                 <div class="event-body">
                     <div class="event-header">
-                        <a class="event-heading">{event.name}</a>
-                        <p class="event-date">{event.date}</p>
+                        <a href={event.URL} class="event-heading">{event.name}</a>
+                        <p class="event-date">{event.eventDate}</p>
                         <p class="event-publisher">{event.publisher}</p>
                     </div>
-                    <p class="event-description">{event.description}</p>
+                    <p class="event-description">{event.description}</p><a class="event-heading-url"> know more...</a>
                     <div class="event-info">
-                        <span class={event.eventTypeClass}>{event.type}</span>
+                        <span class={event.eventTypeClass}>{event.category}</span>
                         <p class="expected-attendance">Tickets Sold: {event.expectedAttendance}</p>
                     </div>
                 </div>

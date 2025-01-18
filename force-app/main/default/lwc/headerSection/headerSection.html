@@ -3,13 +3,18 @@
         <div class="logo">GATHERICA</div>
         <div class="search-container">
             <i class="fa fa-search search-icon"></i>
-            <input type="text" placeholder="Search Events..." class="search-box" 
-                   onfocus={expandSearchBox} onblur={collapseSearchBox} 
+            <input type="text" placeholder="Search Events..." class="search-box"
+                   onfocus={expandSearchBox} onblur={collapseSearchBox}
                    aria-label="Search Events" />
         </div>
         <div class="header-icons">
             <span class="menu-icon" role="button" aria-label="Menu">☰</span>
             <span class="profile-icon" role="button" aria-label="Profile" onclick={handleProfileClicked}>👤</span>
+            <span class="profile-icon" >
+                <lightning-icon icon-name="utility:notification" size="small" onclick={handleBellClick} alternative-text="Notifications">
+                    
+                </lightning-icon>
+            </span>
         </div>
     </header>
 </template>
