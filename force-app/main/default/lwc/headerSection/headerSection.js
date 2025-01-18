@@ -15,4 +15,8 @@ export default class HeaderSection extends LightningElement {
 	handleProfileClicked(event) {
 		this.dispatchEvent(new CustomEvent('profileclicked'));
 	}
+
+	handleBellClick(event) {
+		this.dispatchEvent(new CustomEvent('shownotificationbar'));
+	}
 }

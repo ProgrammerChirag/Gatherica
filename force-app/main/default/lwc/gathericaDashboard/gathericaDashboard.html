@@ -1,7 +1,7 @@
 <template>
     <div class="dashboard">
         <!-- Header Section -->
-        <c-header-section user-login-auth={userLoginAuth} onprofileclicked={handleProfileClicked}></c-header-section>
+        <c-header-section user-login-auth={userLoginAuth} onprofileclicked={handleProfileClicked} onshownotificationbar = {handleShowNotificationBar}></c-header-section>
         <!-- Include the AI Generate Button -->
         <c-ai-generate-button data-target-id="gatherica-Recommendations-01" onstartai={aiRecommendationHandler}>
         </c-ai-generate-button>
@@ -10,6 +10,9 @@
         <div if:false={showSpinner} class="content">
             <div if:true={showProfileModal}>
                 <c-profile-modal user-login-auth={userLoginAuth} onprofileclosed = {handleProfileClosed}></c-profile-modal>
+            </div>
+            <div if:true={showNotificationModal}>
+                <c-event-notifications onclosenotificationbar = {handleCloseNotificationBar}></c-event-notifications>
             </div>
             <c-personalized-Message></c-personalized-Message>
             <div if:true={showRecommendations} class="recommendation-panel-container">

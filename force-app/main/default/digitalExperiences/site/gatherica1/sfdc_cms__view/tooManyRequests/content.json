@@ -9,6 +9,7 @@
             "backgroundImageConfig" : "",
             "backgroundImageOverlay" : "rgba(0,0,0,0)",
             "componentSpacerSize" : "",
+            "dxpStyle" : { },
             "layoutDirectionDesktop" : "row",
             "layoutDirectionMobile" : "column",
             "layoutDirectionTablet" : "column",
@@ -21,13 +22,16 @@
           "children" : [ {
             "children" : [ {
               "attributes" : {
+                "dxpStyle" : { },
                 "richTextValue" : "<div style=\"display: flex; align-items: center; flex-direction: column; margin: 60px 25px 30px 25px;\">\n\t<div style=\"background-image: url(assets/img/tooManyRequests.svg) !important; background-size: contain; height: 350px; width: 100%; background-repeat: no-repeat; background-position: center;\"></div>\n</div>\n<div style=\"margin: 0 25px; text-align: center;\">\n\t<h1 class=\"slds-text-heading_large\">Looks like the site is experiencing higher than usual demand&#8230;</h1>\n\t<p class=\"slds-text-heading_small\">Don't go anywhere. We'll redirect you in a moment.</p>\n</div>"
               },
               "definition" : "community_builder:htmlEditor",
               "id" : "d623c793-57b1-4ff3-b6da-a8990b6f7ecd",
               "type" : "component"
             }, {
-              "attributes" : { },
+              "attributes" : {
+                "dxpStyle" : { }
+              },
               "definition" : "experience_availability:autoRefresh",
               "id" : "a1fc9175-b221-4fc2-8129-9158bca0afc0",
               "type" : "component"
@@ -53,5 +57,6 @@
     "dataProviders" : [ ],
     "themeLayoutType" : "ServiceNotAvailable",
     "viewType" : "too-many-requests"
-  }
+  },
+  "urlName" : "too-many-requests"
 }

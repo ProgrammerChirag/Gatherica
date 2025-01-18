@@ -16,7 +16,9 @@
     <tabs>standard-Contact</tabs>
     <tabs>Gatherica_Event__c</tabs>
     <tabs>gatherica_event_Users__c</tabs>
+    <tabs>Gatherica_Login_Logs</tabs>
     <tabs>Gatherica_internal</tabs>
+    <tabs>Gatherica_User_Notification__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Gatherica_UtilityBar</utilityBar>
 </CustomApplication>

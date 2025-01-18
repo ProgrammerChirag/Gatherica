@@ -1,0 +1,67 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Event",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"208a5874-aeed-4abc-9334-3704e73c17b7\",\"columns\":[{\"UUID\":\"f03ddc62-2467-4ccd-8678-c97413862128\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : { },
+              "definition" : "c:gathericaEventDetailPage",
+              "id" : "89d9fb82-e66e-45b3-9c41-85521dd96652",
+              "type" : "component"
+            } ],
+            "id" : "f03ddc62-2467-4ccd-8678-c97413862128",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "208a5874-aeed-4abc-9334-3704e73c17b7",
+          "type" : "component"
+        } ],
+        "id" : "cb20b51d-d883-4063-a27f-95f8dbc249dc",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Event",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "239bb26b-f3e5-4467-ae9e-c4ae00c8cec1",
+          "type" : "component"
+        } ],
+        "id" : "210c1ba6-ee67-453f-9b40-d6463b5def73",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "b188699e-90f4-477f-93e1-7dd981f21232",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-event"
+  },
+  "urlName" : "event"
+}

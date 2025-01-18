@@ -9,6 +9,7 @@
             "backgroundImageConfig" : "",
             "backgroundImageOverlay" : "rgba(0,0,0,0)",
             "componentSpacerSize" : "",
+            "dxpStyle" : { },
             "layoutDirectionDesktop" : "row",
             "layoutDirectionMobile" : "column",
             "layoutDirectionTablet" : "column",
@@ -20,11 +21,9 @@
           },
           "children" : [ {
             "children" : [ {
-              "attributes" : {
-                "richTextValue" : "<h1 style=\"text-align: center;\">Invalid Page</h1>"
-              },
-              "definition" : "community_builder:richTextEditor",
-              "id" : "59ac2d34-7d73-4615-95f4-13dd3046f979",
+              "attributes" : { },
+              "definition" : "c:errorPage",
+              "id" : "5df1a8b0-4a0f-4619-aed3-61c7ad916a4a",
               "type" : "component"
             } ],
             "id" : "8983eaaa-359e-413a-8c0a-9c94be888756",
@@ -45,6 +44,7 @@
           "attributes" : {
             "customHeadTags" : "",
             "description" : "",
+            "dxpStyle" : { },
             "pageTitle" : "Error",
             "recordId" : "{!recordId}"
           },
@@ -64,5 +64,6 @@
     "dataProviders" : [ ],
     "themeLayoutType" : "Inner",
     "viewType" : "error"
-  }
+  },
+  "urlName" : "error"
 }

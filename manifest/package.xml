@@ -3,8 +3,13 @@
 	<types>
 		<members>CommunitiesLandingController</members>
 		<members>CommunitiesLandingControllerTest</members>
+		<members>EncryptionDecryptionHandler</members>
+		<members>EncryptionDecryptionHandlerTest</members>
+		<members>GathericaErrorUtils</members>
 		<members>GathericaHomeController</members>
 		<members>GathericaHomeControllerTest</members>
+		<members>GathericaHomeSelector</members>
+		<members>GathericaHomeServiceHandler</members>
 		<members>Gatherica_EncodeHandler</members>
 		<members>Gatherica_EncodeHandlerTest</members>
 		<members>Gatherica_Exception</members>
@@ -97,15 +102,21 @@
 	</types>
 	<types>
 		<members>aiGenerateButton</members>
+		<members>analyticsPanel</members>
+		<members>errorPage</members>
 		<members>eventCard</members>
+		<members>eventNotifications</members>
 		<members>footer</members>
 		<members>gatherica</members>
 		<members>gathericaDashboard</members>
+		<members>gathericaEventDetailPage</members>
 		<members>gathericaLogin</members>
 		<members>gathericaRecommendationsPanel</members>
 		<members>gathericaSpinner</members>
 		<members>gathericaTab</members>
+		<members>gathericaUserLoginList</members>
 		<members>headerSection</members>
+		<members>lightningChart</members>
 		<members>loginUI</members>
 		<members>organizerLoginUI</members>
 		<members>organizerSignUpUI</members>
@@ -135,5 +146,5 @@
 		<members>*</members>
 		<name>SiteDotCom</name>
 	</types>
-	<version>60.0</version>
+	<version>62.0</version>
 </Package>

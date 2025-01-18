@@ -11,34 +11,38 @@
                 <div class="form-card">
                     <div class="form-group">
                         <div class="input-container">
-                            <input type="text" class="input-field" placeholder="Enter name" oninput={handleNameChange} />
+                            <input type="text" class="input-field" data-target-id='name'  placeholder="Enter name" oninput={handleNameChange} />
                         </div>
                         <div class="input-container">
-                            <input type="text" class="input-field" placeholder="Enter username" oninput={handleUsernameChange} />
+                            <input type="text" class="input-field" data-target-id='username' placeholder="Enter username" oninput={handleUsernameChange} />
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-container">
-                            <input type="password" class="input-field" placeholder="Enter password" oninput={handlePasswordChange} />
+                            <input type="password" class="input-field" data-target-id='password' placeholder="Enter password" oninput={handlePasswordChange} />
                         </div>
                         <div class="input-container">
-                            <input type="password" class="input-field" placeholder="Confirm password" oninput={handleConfirmPasswordChange} />
+                            <input type="password" class="input-field" data-target-id='passowrd_recheck' placeholder="Confirm password" oninput={handleConfirmPasswordChange} />
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-container">
-                            <input type="email" class="input-field" placeholder="Enter email" oninput={handleEmailChange} />
+                            <input type="email" class="input-field" data-target-id='email' placeholder="Enter email" oninput={handleEmailChange} />
                         </div>
                         <div class="input-container">
-                            <input type="date" class="input-field" placeholder="Enter date of birth" oninput={handleDobChange} />
+                            <input type="date" class="input-field" data-target-id='dob' placeholder="Enter date of birth" oninput={handleDobChange} />
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-container">
-                            <input type="text" class="input-field" placeholder="Enter city" oninput={handleCityChange} />
+                            <input type="text" class="input-field" data-target-id='city' placeholder="Enter city" oninput={handleCityChange} />
                         </div>
                     </div>
-                    <button class="signup-button" onclick={handleSignup}>Sign Up</button>
+                    <button if:false={showSpinner} data-target-id='submitButton' class="signup-button" onclick={handleSignup}>Sign Up</button>
+                    <!-- spinner section -->
+                    <div if:true={showSpinner}>
+                        <c-gatherica-spinner is-short-container = true></c-gatherica-spinner>
+                    </div>
                 </div>
             </div>
             <div class="already-account">

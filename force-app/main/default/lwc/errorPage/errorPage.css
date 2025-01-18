@@ -1,0 +1,46 @@
+.error-container {
+    text-align: center;
+    padding: 50px;
+    background-color: var(--lwc-colorBackgroundAlt);
+}
+
+.error-icon {
+    margin-bottom: 20px;
+}
+
+.error-title {
+    font-size: 2rem;
+    color: var(--lwc-colorTextInverse);
+}
+
+.error-description {
+    margin: 10px;
+    font-size: 1.2rem;
+    color: var(--lwc-colorTextInverse);
+}
+
+.lightning-button {
+    margin-top: 20px;
+}
+
+
+.button-gatherica {
+    font-family: 'Lato', sans-serif;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+	background-color: grey;
+	color: white;
+}
+
+.button-gatherica:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+.back-button-text {
+    margin: 0px 10px;
+}

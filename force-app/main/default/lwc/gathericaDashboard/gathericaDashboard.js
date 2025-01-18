@@ -1,5 +1,6 @@
 import { LightningElement, track, api } from 'lwc';
 import { eventList, tabConfigList } from './eventData';
+import getEventList from '@salesforce/apex/GathericaHomeController.getEventList';
 
 export default class GathericaDashboard extends LightningElement {
 	@track events = [];
@@ -10,6 +11,9 @@ export default class GathericaDashboard extends LightningElement {
 	@track showRecommendations = true;
 	@track showExploreMore = true;
 	@api userLoginAuth ;
+	@track showNotificationModal = false;
+	@track showErrorState;
+	@track errorInfo = null;
 	filterCriteria = {
 		name: '',
 		date: ''
@@ -17,13 +21,22 @@ export default class GathericaDashboard extends LightningElement {
 	showSpinner;
 	tabConfig = tabConfigList;
 	showProfileModal = false;
+	@api username = '';
 
 	handleProfileClicked(event) {
 		this.showProfileModal = true;
 	}
 
+	handleShowNotificationBar(event) {
+		this.showNotificationModal = true;
+	}
+
 	handleProfileClosed(event) {
 		this.showProfileModal = false;
+	}
+
+	handleCloseNotificationBar(event) {
+		this.showNotificationModal = false;
 	}
 
 	getActiveTabFilterCriteria() {
@@ -129,7 +142,19 @@ export default class GathericaDashboard extends LightningElement {
 	}
 
 	loadEvents() {
-		this.applyFilters();
+		const inputWrapper = {
+			'recordCount' : 100,
+			'username' : this.username,
+		};
+		getEventList(inputWrapper).then( result => {
+			console.log('OUTPUT : ',JSON.stringify(result[0]));
+			this.events = result;
+			this.applyFilters();
+		}).catch( error => {
+			console.error('received error state from server...');
+			this.showErrorState = true;
+			this.errorInfo = error;
+		});
 	}
 
 	handleFilterChange(event) {
@@ -149,7 +174,6 @@ export default class GathericaDashboard extends LightningElement {
 
 	applyFilters() {
 		let activeTab = this.getActiveTabFilterCriteria();
-		this.events = eventList;
 		const { name, date } = this.filterCriteria;
 		this.filteredEvents = this.events.filter(event => this.isFilterMatchingWithTabConfig(event, activeTab, name, date));
 	}

@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Gatherica_Event__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <label>Gatherica Event</label>
     <referenceTo>Gatherica_Event__c</referenceTo>
     <relationshipLabel>gatherica event Users</relationshipLabel>

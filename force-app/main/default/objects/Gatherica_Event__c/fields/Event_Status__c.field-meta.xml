@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Event_Status__c</fullName>
-    <externalId>false</externalId>
     <label>Event Status</label>
     <required>true</required>
     <trackHistory>false</trackHistory>
@@ -60,6 +59,11 @@
                 <fullName>About To Start</fullName>
                 <default>false</default>
                 <label>About To Start</label>
+            </value>
+            <value>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+                <label>Scheduled</label>
             </value>
         </valueSetDefinition>
     </valueSet>
